@@ -1,13 +1,33 @@
 const menu = document.querySelector('.header__menu'),
-  menuButton = document.querySelector('.header__menu-btn'),
-  menuLinks = menu.querySelectorAll('a[href^="#"]'),
-  mobileMenuOptions = document.querySelectorAll('.header__menu-option'),
-  submitButton = document.querySelector('.footer__submit-btn'),
-  menuList = document.querySelector('.header__menu-options'),
-  slidesContainer = document.querySelector(".highway__carousel"),
-  prevButton = document.querySelector('.highway__btn_left'),
-  nextButton = document.querySelector('.highway__btn_right');
+      menuButton = document.querySelector('.header__menu-btn'),
+      menuLinks = menu.querySelectorAll('a[href^="#"]'),
+      mobileMenuOptions = document.querySelectorAll('.header__menu-option'),
+      submitButton = document.querySelector('.footer__submit-btn'),
+      menuList = document.querySelector('.header__menu-options'),
+      inputEmail = document.querySelector('.footer__input-email');
 let touchStart;
+const roadsSlider = new Swiper(".highway__swiper", {
+  slidesPerView: "auto",
+  loop: true,
+  spaceBetween: 40,
+  navigation: {
+    nextEl: ".highway__btn_right",
+    prevEl: ".highway__btn_left"
+  }
+});
+const bikesSlider = new Swiper(".bikes__swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 0,
+    },
+  }
+});
 
 menuButton.addEventListener('click', (event) => {
   if (event.target.classList.contains('header__menu-btn_close')) {
@@ -52,36 +72,12 @@ for (const link of menuLinks) {
   });
 }
 
-//появление кнопки отправки формы при активации поля ввода e-mail
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('footer__input-email')) {
+//появление кнопки отправки формы при заполнении поля ввода e-mail
+inputEmail.addEventListener('input', () => {
+  if (inputEmail.value !== "") {
     submitButton.style.display = "block";
-  }
-  else {
+  } else {
     submitButton.style.display = "none";
   }
 });
 
-const swiper = new Swiper(".highway__swiper", {
-  slidesPerView: "auto",
-  loop: true,
-  spaceBetween: 40,
-  navigation: {
-    nextEl: ".highway__btn_right",
-    prevEl: ".highway__btn_left"
-  }
-});
-
-const swiper1 = new Swiper(".bikes__swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      spaceBetween: 0,
-    },
-  }
-});
