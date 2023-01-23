@@ -1,0 +1,5 @@
+.highway__carousel {
+  display: flex;
+  position: relative;
+  transition: transform .5s ease-out;
+}
