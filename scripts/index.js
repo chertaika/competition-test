@@ -74,8 +74,14 @@ const swiper = new Swiper(".highway__swiper", {
 
 const swiper1 = new Swiper(".bikes__swiper", {
   slidesPerView: "auto",
+  spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+    768: {
+      spaceBetween: 0,
+    },
+  }
 });
