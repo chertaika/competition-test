@@ -51,14 +51,13 @@
 @import "../blocks/bikes/__categories/bikes__categories.css";
 @import "../blocks/bikes/__category/bikes__category.css";
 @import "../blocks/bikes/__category/_inactive/bikes__category_inactive.css";
+@import "../blocks/bikes/__swiper/bikes__swiper.css";
 @import "../blocks/bikes/__cards/bikes__cards.css";
 @import "../blocks/bikes/__card/bikes__card.css";
 @import "../blocks/bikes/__img-container/bikes__img-container.css";
 @import "../blocks/bikes/__img/bikes__img.css";
 @import "../blocks/bikes/__card-title/bikes__card-title.css";
 @import "../blocks/bikes/__paginator/bikes__paginator.css";
-@import "../blocks/bikes/__paginator-btn/bikes__paginator-btn.css";
-@import "../blocks/bikes/__paginator-btn/_active/bikes__paginator-btn_active.css";
 @import "../blocks/training/training.css";
 @import "../blocks/training/__title/training__title.css";
 @import "../blocks/training/__img/training__img.css";
@@ -71,3 +70,14 @@
 @import "../blocks/footer/__input-email/footer__input-email.css";
 @import "../blocks/footer/__submit-btn/footer__submit-btn.css";
 @import "../blocks/footer/__copyright/footer__copyright.css";
+
+.swiper-pagination-bullet {
+  width: 1.3vw;
+  aspect-ratio: 1/1;
+  background-color: #8a8a8a;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}

@@ -62,7 +62,7 @@ document.addEventListener('click', (event) => {
   }
 });
 
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".highway__swiper", {
   slidesPerView: "auto",
   loop: true,
   spaceBetween: 40,
@@ -72,38 +72,10 @@ const swiper = new Swiper(".mySwiper", {
   }
 });
 
-// //смещение слайда тапом по сенсорному экрану
-// slidesContainer.addEventListener("touchstart", (e) => {
-//   touchStart = e.touches[0].clientX;
-// });
-//
-// slidesContainer.addEventListener("touchend", (e) => {
-//   let touchEnd = e.changedTouches[0].clientX;
-//   if (touchStart > touchEnd) {
-//     swipeSlide(true);
-//   } else {
-//     swipeSlide(false);
-//   }
-// });
-//
-// //смещение слайда по клику на кнопки
-// nextButton.addEventListener("click", () => {
-//   swipeSlide(true);
-// });
-//
-// prevButton.addEventListener("click", () => {
-//   swipeSlide(false);
-// });
-//
-// swipeSlide = (forward) => {
-//   let currentSlide = slidesContainer.querySelector('.current-slide');
-//   let nextSlide = currentSlide.nextElementSibling;
-//   let currentPosition = currentSlide.getBoundingClientRect().left;
-//   let nextPosition = nextSlide.getBoundingClientRect().left;
-//
-//   if (forward) {
-//     slidesContainer.scrollLeft += nextPosition - currentPosition;
-//   } else {
-//     slidesContainer.scrollLeft -= nextPosition - currentPosition;
-//   }
-// }
+const swiper1 = new Swiper(".bikes__swiper", {
+  slidesPerView: "auto",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

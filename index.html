@@ -79,33 +79,33 @@
       <p class="highway__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы
         или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.
       </p>
-      <div class="highway__swiper swiper mySwiper">
-        <div class="highway__carousel swiper-wrapper">
-          <div class="highway__slide current-slide swiper-slide">
+      <div class="highway__swiper swiper">
+        <ul class="highway__carousel swiper-wrapper">
+          <li class="highway__slide current-slide swiper-slide">
             <img src="./images/road-mount.jpg" alt="дорога в горах" class="highway__pic">
             <div class="highway__rectangle">
               <div class="highway__gradient highway__gradient_type_mountain"></div>
             </div>
-          </div>
-          <div class="highway__slide swiper-slide">
+          </li>
+          <li class="highway__slide swiper-slide">
             <img src="./images/road-forest.jpg" alt="дорога в лесу" class="highway__pic">
             <div class="highway__rectangle">
               <div class="highway__gradient highway__gradient_type_hills"></div>
             </div>
-          </div>
-          <div class="highway__slide swiper-slide">
+          </li>
+          <li class="highway__slide swiper-slide">
             <img src="./images/road-village.jpg" alt="дорога в горах" class="highway__pic">
             <div class="highway__rectangle">
               <div class="highway__gradient highway__gradient_type_plain"></div>
             </div>
-          </div>
-          <div class="highway__slide swiper-slide">
+          </li>
+          <li class="highway__slide swiper-slide">
             <img src="./images/training-way.jpg" alt="дорога в горах" class="highway__pic">
             <div class="highway__rectangle">
               <div class="highway__gradient highway__gradient_type_mountain"></div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div class="highway__selector">
         <button class="highway__btn highway__btn_left"></button>
@@ -119,7 +119,7 @@
         <option class="bikes__category-option" value="2">Грэвел</option>
         <option class="bikes__category-option" value="3">TT</option>
       </select>
-      <ul class="bikes__categories">
+      <ul class="bikes__categories swiper-wrapper">
         <li>
           <a href="#" class="bikes__category link-hover">Шоссе</a>
         </li>
@@ -130,35 +130,39 @@
           <a href="#" class="bikes__category bikes__category_inactive">TT</a>
         </li>
       </ul>
-      <div class="bikes__cards">
-        <a href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
-           class="bikes__card" target="_blank">
-          <div class="bikes__img-container">
-            <img src="./images/cervelo-caledonia-5.jpg" class="bikes__img" alt="велосипед Cervelo Caledonia-5">
-          </div>
-          <h3 class="bikes__card-title link-hover">Cervelo Caledonia-5</h3>
-        </a>
-        <a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
-           class="bikes__card bikes__card_hidden" target="_blank">
-          <div class="bikes__img-container">
-            <img src="./images/cannondale-systemsix-himod.jpg" class="bikes__img"
-                 alt="велосипед Cannondale Systemsix Himod">
-          </div>
-          <h3 class="bikes__card-title link-hover">Cannondale Systemsix Himod</h3>
-        </a>
-        <a href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
-           class="bikes__card bikes__card_hidden" target="_blank">
-          <div class="bikes__img-container">
-            <img src="./images/trek-domane-sl-7.jpg" class="bikes__img" alt="велосипед Trek Domane SL-7">
-          </div>
-          <h3 class="bikes__card-title link-hover">Trek Domane SL-7</h3>
-        </a>
+      <div class="bikes__swiper">
+        <ul class="bikes__cards swiper-wrapper">
+          <li class="bikes__slide swiper-slide">
+            <a href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
+               class="bikes__card" target="_blank">
+              <div class="bikes__img-container">
+                <img src="./images/cervelo-caledonia-5.jpg" class="bikes__img" alt="велосипед Cervelo Caledonia-5">
+              </div>
+              <h3 class="bikes__card-title link-hover">Cervelo Caledonia-5</h3>
+            </a>
+          </li>
+          <li class="bikes__slide swiper-slide">
+            <a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
+               class="bikes__card" target="_blank">
+              <div class="bikes__img-container">
+                <img src="./images/cannondale-systemsix-himod.jpg" class="bikes__img"
+                     alt="велосипед Cannondale Systemsix Himod">
+              </div>
+              <h3 class="bikes__card-title link-hover">Cannondale Systemsix Himod</h3>
+            </a>
+          </li>
+          <li class="bikes__slide swiper-slide">
+            <a href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
+               class="bikes__card" target="_blank">
+              <div class="bikes__img-container">
+                <img src="./images/trek-domane-sl-7.jpg" class="bikes__img" alt="велосипед Trek Domane SL-7">
+              </div>
+              <h3 class="bikes__card-title link-hover">Trek Domane SL-7</h3>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="bikes__paginator">
-        <div class="bikes__paginator-btn bikes__paginator-btn_active"></div>
-        <div class="bikes__paginator-btn"></div>
-        <div class="bikes__paginator-btn"></div>
-      </div>
+      <div class="bikes__paginator swiper-pagination"></div>
     </section>
     <section class="training" id="training">
       <h2 class="training__title">Тренировки</h2>
